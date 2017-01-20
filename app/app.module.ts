@@ -6,6 +6,8 @@ import { MealListComponent }  from './meal-list.component';
 import { MealEditComponent } from './meal-edit.component';
 import { NewMealComponent } from './meal-new.component';
 import { CalorieFilterPipe} from './calorieFilter.pipe';
+import { CalCountComponent} from './cal-count.component';
+import { CalCalculatorPipe} from './cal-calculator.pipe';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule ],
@@ -13,7 +15,9 @@ import { CalorieFilterPipe} from './calorieFilter.pipe';
                   MealListComponent,
                   MealEditComponent,
                   NewMealComponent,
-                  CalorieFilterPipe],
+                  CalorieFilterPipe,
+                  CalCountComponent,
+                  CalCalculatorPipe],
   bootstrap:    [ AppComponent ]
 })
 

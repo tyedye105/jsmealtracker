@@ -4,7 +4,14 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'meal-list',
   template: `
-  <h2> Food eaten on {{month}}-{{day}}-{{year}}! </h2>
+  <div class="row">
+    <div class="col-md-6">
+    <h2> Food eaten on {{month}}-{{day}}-{{year}}! </h2>
+    </div>
+    <div class="col-md-6">
+      <cal-count [childMealList]="childMealList"></cal-count>
+    </div>
+  </div>
   <label> Filter entries by amount of calories</label>
   <select (change)="updateCalorieLimit($event.target.value)">
     <option value=200> 200 calories or less </option>
@@ -15,19 +22,11 @@ import { Meal } from './meal.model';
   </select>
   <div class="entryDisplay">
     <div class="entry" *ngFor="let currentMeal of childMealList | calorieFilter : calorieLimit">
-      <div class = row>
-        <div class = "col-md-6">
-          <h3>{{currentMeal.name}}</h3>
-        </div>
-        <div class ="col-md-6">
-            <button class='btn edit-btn' (click)="mealEdit(currentMeal)">Edit</button>
-        </div>
-      </div>
+    <h3 (click)="mealEdit(currentMeal)">{{currentMeal.name}}</h3>
     <h4>Details:</h4>
     <h5>{{currentMeal.details}}</h5>
     <h4>Calories: {{currentMeal.calories}}</h4>
     <h5> Eaten on: {{currentMeal.logDate}}</h5>
-    <br>
     </div>
   </div>
 
