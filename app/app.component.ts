@@ -8,14 +8,7 @@ import { Meal } from './meal.model';
     <h1> Meal Tracker</h1>
     <p> Welcome to the meal tracker!  Need help trying to keep track of everything eaten today? This this app is for! </p>
     <br>
-    <h2> Food eaten on current date! </h2>
-    <div *ngFor="let currentMeal of masterMealList">
-    <h3>{{currentMeal.name}}</h3>
-    <h4>Details:</h4>
-    <h5>{{currentMeal.details}}</h5>
-    <h4>Calories: {{currentMeal.calories}}</h4>
-    <h5> Eaten on: {{currentMeal.logDate}}</h5>
-    </div>
+    <meal-list [childMealList]="masterMealList"></meal-list>
   </div>
   `
 })
