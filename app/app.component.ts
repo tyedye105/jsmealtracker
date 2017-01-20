@@ -9,8 +9,10 @@ import { Meal } from './meal.model';
     <p> Welcome to the meal tracker!  Need help trying to keep track of everything eaten today? This this app is for! </p>
     <br>
     <meal-list [childMealList]="masterMealList"  (clickSender)="mealEdit($event)"></meal-list>
-    <meal-new (newMealSender)='addMeal($event)'></meal-new>
+    <hr>
     <meal-edit [childSelectedMeal]="selectedMeal" (finishedEditingSender)="finishedEditing()"></meal-edit>
+    <hr>
+    <meal-new (newMealSender)='addMeal($event)'></meal-new>
   </div>
   `
 })

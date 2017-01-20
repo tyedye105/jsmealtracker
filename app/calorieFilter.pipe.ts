@@ -10,7 +10,6 @@ export class CalorieFilterPipe implements PipeTransform {
   transform(input: Meal[], calorieLimit) {
     var output: Meal[] = [];
     for(var i=0; i<input.length; i++){
-      debugger;
       console.log(input[i].calories)
       if (input[i].calories <= calorieLimit){
         output.push(input[i]);

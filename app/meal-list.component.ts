@@ -13,13 +13,22 @@ import { Meal } from './meal.model';
     <option value=800> 800 calories or less </option>
     <option value=3000> no limit </option>
   </select>
-  <div *ngFor="let currentMeal of childMealList | calorieFilter : calorieLimit">
-  <h3>{{currentMeal.name}}</h3>
-  <h4>Details:</h4>
-  <h5>{{currentMeal.details}}</h5>
-  <h4>Calories: {{currentMeal.calories}}</h4>
-  <h5> Eaten on: {{currentMeal.logDate}}</h5>
-  <button class='btn' (click)="mealEdit(currentMeal)">Edit logged Meal</button>
+  <div class="entryDisplay">
+    <div class="entry" *ngFor="let currentMeal of childMealList | calorieFilter : calorieLimit">
+      <div class = row>
+        <div class = "col-md-6">
+          <h3>{{currentMeal.name}}</h3>
+        </div>
+        <div class ="col-md-6">
+            <button class='btn edit-btn' (click)="mealEdit(currentMeal)">Edit</button>
+        </div>
+      </div>
+    <h4>Details:</h4>
+    <h5>{{currentMeal.details}}</h5>
+    <h4>Calories: {{currentMeal.calories}}</h4>
+    <h5> Eaten on: {{currentMeal.logDate}}</h5>
+    <br>
+    </div>
   </div>
 
   `
