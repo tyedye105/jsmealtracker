@@ -9,6 +9,7 @@ import { Meal } from './meal.model';
     <p> Welcome to the meal tracker!  Need help trying to keep track of everything eaten today? This this app is for! </p>
     <br>
     <meal-list [childMealList]="masterMealList"  (clickSender)="mealEdit($event)"></meal-list>
+    <meal-new (newMealSender)='addMeal($event)'></meal-new>
     <meal-edit [childSelectedMeal]="selectedMeal" (finishedEditingSender)="finishedEditing()"></meal-edit>
   </div>
   `
@@ -20,8 +21,8 @@ export class AppComponent {
     new Meal("pbj", "the classic", 300, "1-20-17"),
     new Meal("chips", "I couldn't deny the crunchy goodness ", 390, "1-20-17")
   ]
-
   selectedMeal = null;
+  newMeal = "placeholder";
 
   mealEdit(clickedMeal) {
     this.selectedMeal = clickedMeal
@@ -30,4 +31,12 @@ export class AppComponent {
   finishedEditing() {
     this.selectedMeal = null;
   }
+
+
+
+  addMeal(newMealFromChild: Meal) {
+    this.masterMealList.push(newMealFromChild);
+  }
+
+
 }
