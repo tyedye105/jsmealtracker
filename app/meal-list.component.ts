@@ -18,8 +18,8 @@ import { Meal } from './meal.model';
     <option value=3000> no limit </option>
   </select>
   <div class="entryDisplay">
-    <div class="entry" *ngFor="let currentMeal of childMealList | calorieFilter : calorieLimit">
-    <h3 (click)="mealEdit(currentMeal)">{{currentMeal.name}}</h3>
+    <div class="entry" (click)="mealEdit(currentMeal)" *ngFor="let currentMeal of childMealList | calorieFilter : calorieLimit">
+    <h3>{{currentMeal.name}}</h3>
     <h4>Details:</h4>
     <h5>{{currentMeal.details}}</h5>
     <h4>Calories: {{currentMeal.calories}}</h4>
@@ -36,7 +36,6 @@ export class MealListComponent {
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
   calorieLimit: number = 400;
-
   @Input() childMealList: Meal[];
   @Output() clickSender = new EventEmitter();
 

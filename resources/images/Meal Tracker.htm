@@ -1,0 +1,92 @@
+
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Meal Tracker</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./Meal Tracker_files/vendor.min.js"></script>
+    <link rel="stylesheet" href="./Meal Tracker_files/vendor.css">
+    <!-- 1. Load libraries -->
+     <!-- Polyfill(s) for older browsers -->
+    <script src="./Meal Tracker_files/shim.min.js"></script>
+    <script src="./Meal Tracker_files/zone.js"></script>
+    <script src="./Meal Tracker_files/Reflect.js"></script>
+    <script src="./Meal Tracker_files/system.src.js"></script>
+    <!-- 2. Configure SystemJS -->
+    <script src="./Meal Tracker_files/systemjs.config.js"></script>
+
+    <link rel="stylesheet" href="./Meal Tracker_files/styles.css">
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+  <!-- 3. Display the application -->
+  <body><script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.18.6'><\/script>".replace("HOST", location.hostname));
+//]]></script><script async="" src="./Meal Tracker_files/browser-sync-client.js"></script>
+
+    <app-root>
+  <div class="container well">
+    <div class="jumbotron">
+    <h1> Meal Tracker</h1>
+    <p> Welcome to the meal tracker!  Need help trying to keep track of everything eaten today? This this app is for! </p>
+    </div>
+    <meal-list ng-reflect-child-meal-list="[object Object],[object Object],[object Object]">
+  <div class="row">
+    <div class="col-md-6">
+    <h2> Food eaten on 1-20-2017! </h2>
+    </div>
+  </div>
+  <label> Filter entries by amount of calories</label>
+  <select>
+    <option value="200" ng-reflect-value="200"> 200 calories or less </option>
+    <option selected="" value="400" ng-reflect-value="400"> 400 calories or less </option>
+    <option value="600" ng-reflect-value="600"> 600 calories or less </option>
+    <option value="800" ng-reflect-value="800"> 800 calories or less </option>
+    <option value="3000" ng-reflect-value="3000"> no limit </option>
+  </select>
+  <div class="entryDisplay">
+    <!--template bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object],[object Object]"
+}--><div class="entry">
+    <h3>apple</h3>
+    <h4>Details:</h4>
+    <h5>they saw it keeps the dentist away</h5>
+    <h4>Calories: 100</h4>
+    <h5> Eaten on: 1-20-17</h5>
+    </div><div class="entry">
+    <h3>pbj</h3>
+    <h4>Details:</h4>
+    <h5>the classic</h5>
+    <h4>Calories: 300</h4>
+    <h5> Eaten on: 1-20-17</h5>
+    </div><div class="entry">
+    <h3>chips</h3>
+    <h4>Details:</h4>
+    <h5>I couldn't deny the crunchy goodness </h5>
+    <h4>Calories: 390</h4>
+    <h5> Eaten on: 1-20-17</h5>
+    </div>
+  </div>
+
+  </meal-list>
+    <hr>
+    <meal-edit ng-reflect-child-selected-meal="[object Object]">
+  <!--template bindings={
+  "ng-reflect-ng-if": null
+}-->
+  </meal-edit>
+    <hr>
+    <meal-new>
+  <h3>Eat anything today? Log it!</h3>
+  <h6>I really hope you are eating something, starvation is a terrible method of weight management</h6>
+  <button class="btn">Log a new Meal</button>
+  <!--template bindings={
+  "ng-reflect-ng-if": null
+}-->
+  </meal-new>
+  </div>
+  </app-root>
+  
+
+</body></html>

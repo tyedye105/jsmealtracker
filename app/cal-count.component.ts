@@ -11,12 +11,4 @@ import { Meal } from './meal.model';
 export class CalCountComponent {
   @Input() childMealList: Meal[];
   totalCal: number = 500
-
-  childMeals: Meal[];
-  for(var child of children) {
-    console.log();
-  }
-
-
-  }
 }

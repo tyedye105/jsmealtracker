@@ -8,11 +8,42 @@
   height: 200px;
   width: 200px;
   padding: 5px;
-  margin: 0 5;
-  border-color: blue;
+  margin: 5 5;
+  background-color: rgba(222,226,48,.8);
   border-radius: 25px;
 }
 
 .edit-btn{
   margin-top: 18px;
+}
+
+body {
+  background: url("../../resources/images/background.jpg") fixed;
+  background-size: cover;
+}
+.inputForm{
+  padding: 5px 5px 5px 5px;
+  background-color: rgba(222,226,48,.8);
+  border-radius: 25px;
+  margin-top: 5px;
+}
+.well {
+  background-color: rgba(245,245,245,.73);
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 5px;
+}
+
+.jumbotron {
+  background-color: #52ad1f;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.btn {
+  background-color: rgba(78,255,46,.73);
 }

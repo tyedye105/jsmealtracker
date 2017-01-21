@@ -4,6 +4,8 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'meal-new',
   template: `
+  <h3>Eat anything today? Log it!</h3>
+  <h6>I really hope you are eating something, starvation is a terrible method of weight management</h6>
   <button class="btn" (click)="newMealForm()">Log a new Meal</button>
   <div *ngIf="newMeal">
     <div class="inputForm">
