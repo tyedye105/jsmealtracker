@@ -8,9 +8,6 @@ import { Meal } from './meal.model';
     <div class="col-md-6">
     <h2> Food eaten on {{month}}-{{day}}-{{year}}! </h2>
     </div>
-    <div class="col-md-6">
-      <cal-count [childMealList]="childMealList"></cal-count>
-    </div>
   </div>
   <label> Filter entries by amount of calories</label>
   <select (change)="updateCalorieLimit($event.target.value)">
